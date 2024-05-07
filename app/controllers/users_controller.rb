@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     a_new_user.username = input_username
     a_new_user.save
 
-    redirect_to("/users")
+    redirect_to("/users/" + a_new_user.username)
     #render({ :template => "photo_templates/create"})
   end
 
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
    the_user.username = input_username
    the_user.save
 
-   redirect_to("/users/" + the_user.id.to_s)
+   redirect_to("/users/" + the_user.username.to_s)
     #render({ :template => "photo_templates/update"})
   end
 
